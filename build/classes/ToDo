@@ -1,0 +1,197 @@
+test for null pointer
+
+
+
+Add graphics
+
+
+Add text to beginning screen/ending screen
+Clean up file code
+
+
+
+
+  
+
+/**
+ * ************************************
+ *
+ * Dale Frank CS 3 – 0119 - Java Programming Assignment 5 Account Class
+ *
+ ***********************************
+ */
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.MenuBar;
+import javax.swing.*;
+
+public class AccountWindow extends JFrame {
+
+  public static WindowEventListen frame;
+  private static MenuBar MenuBar;
+  //public static CheckingAccount TransCheckAccount;
+  public static JTextArea transListArea;
+
+  public AccountWindow() {
+    String enterBalance, message;
+    String customerName;
+    int transactionCode;
+    double transactionAmount;
+    double initialBalance;
+    frame = new ChoicesFrame("Superheros vs.Asteroids");
+    frame.setPreferredSize(new Dimension(1100, 800));
+    ;
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    transListArea = new JTextArea(22, 26);
+    transListArea.setFont(new Font("Courier", Font.PLAIN, 16));
+    transListArea.setBackground(Color.black);
+    transListArea.setForeground(Color.white);
+    transListArea.setLocation(666, 666);
+    frame.getContentPane().add(transListArea);
+    transListArea.setText("\n    Pick a menu item to start.");
+    //contentPane.add(transListArea);
+    frame.setVisible(true);
+    frame.pack();
+  }
+
+  public static void frameHide() {
+    frame.setVisible(false);
+  }
+
+  public static void frameShow() {
+    frame.setVisible(true);
+  }
+}
+
+
+
+
+
+
+
+
+
+-------------------------------------------
+
+/**
+ * ************************************
+ *
+ * Dale Frank CS 3 – 0119 - Java Programming Assignment 5 Account Class
+ *
+ ***********************************
+ */
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.MenuBar;
+import javax.swing.*;
+
+public class AccountWindow extends JFrame {
+
+  public static WindowEventListen frame;
+  private static MenuBar MenuBar;
+  //public static CheckingAccount TransCheckAccount;
+  public static JTextArea transListArea; 
+  private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel moon;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    //private javax.swing.JTextArea jTextArea1;
+
+  public AccountWindow() {
+    
+    
+    
+    String enterBalance, message;
+    String customerName;
+    int transactionCode;
+    double transactionAmount;
+    double initialBalance;
+    frame = new ChoicesFrame("Superheros vs.Asteroids");
+    frame.setPreferredSize(new Dimension(1100, 800));
+    ;
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    transListArea = new JTextArea(22, 26);
+    transListArea.setFont(new Font("Courier", Font.PLAIN, 16));
+    transListArea.setBackground(Color.white);
+    transListArea.setForeground(Color.white);
+    transListArea.setColumns(20);
+    transListArea.setRows(20);
+
+    initComponents();
+    
+    frame.getContentPane().add(jLabel1);
+   frame.getContentPane().add(moon);
+   frame.getContentPane().add(jLabel3);
+   frame.getContentPane().add(transListArea);
+    transListArea.setText("\n    Pick a menu item to start.");
+    //contentPane.add(transListArea);
+    frame.setBackground(Color.black);
+    frame.setVisible(true);
+    frame.pack();
+  }
+
+  public static void frameHide() {
+    frame.setVisible(false);
+  }
+
+  public static void frameShow() {
+    frame.setVisible(true);
+  }
+  
+  public void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        moon = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        transListArea = new javax.swing.JTextArea();
+
+        
+        setBackground(new java.awt.Color(0, 0, 0));
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(null);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("images/sun1.jpg")); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(10, 20, 100, 90);
+
+        moon.setIcon(new javax.swing.ImageIcon("images/moonSmall.jpg")); // NOI18N
+        jPanel1.add(moon);
+        moon.setBounds(170, 120, 50, 50);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/dalefrank/ht/JavaA6Superheroes/images/earth.jpg")); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(250, 170, 210, 170);
+
+        transListArea.setBackground(new java.awt.Color(0, 0, 0));
+        //transListArea.setColumns(20);
+        transListArea.setForeground(new java.awt.Color(255, 255, 255));
+        //transListArea.setRows(5);
+        //transListArea.setLocation(444, 666);
+        jScrollPane1.setViewportView(transListArea);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(155, 1, 340, 100);
+
+//        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
+//        getContentPane().setLayout(layout);
+//        layout.setHorizontalGroup(
+//            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+//            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
+//        );
+//        layout.setVerticalGroup(
+//            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+//            .add(layout.createSequentialGroup()
+//                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 450, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+//                .add(0, 12, Short.MAX_VALUE))
+//        );
+
+        pack();
+    }
+}
+
